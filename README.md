@@ -1,2 +1,2 @@
-# winMIPS64
+# WinMIPS64
 A pipeline simulator for MIPS64 
