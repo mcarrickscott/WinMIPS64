@@ -21,6 +21,10 @@ would like to see an additional feature, please let me know at mscott@indigo.ie
 
 PDF Documentation is available in the */doc* folder, along with a couple of lab exercises *ex2.pdf* and *ex3.pdf*
 
+# Install
+
+Copy the repository contents to a working directory, and build the project *WinEsim.vcxproj* from source using Visual Studio C++. This will create the windows executable.
+
 
 Mike Scott, March 2025
 
