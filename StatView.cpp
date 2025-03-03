@@ -62,20 +62,20 @@ void CStatView::OnDraw(CDC* pDC)
 	pDC->SetTextColor(RGB(0,0,0));
 
 	if (pDoc->cycles==1)
-		sprintf(txt," 1 Cycle");
+		sprintf_s(txt,100," 1 Cycle");
 	else
-		sprintf(txt," %d Cycles",pDoc->cycles);
+		sprintf_s(txt,100," %d Cycles",pDoc->cycles);
 	pDC->TextOut(0,20,txt);
 
 	if (pDoc->instructions==1)
-		sprintf(txt," 1 Instruction");
+		sprintf_s(txt,100," 1 Instruction");
 	else
-		sprintf(txt," %d Instructions",pDoc->instructions);
+		sprintf_s(txt,100," %d Instructions",pDoc->instructions);
 	pDC->TextOut(0,34,txt);
 
 	if (pDoc->instructions>0) 
 	{
-		sprintf(txt," %3.3f Cycles Per Instruction (CPI)",(double)pDoc->cycles/pDoc->instructions);
+		sprintf_s(txt,100," %3.3f Cycles Per Instruction (CPI)",(double)pDoc->cycles/pDoc->instructions);
 		pDC->TextOut(0,48,txt);
 	}
 
@@ -104,39 +104,39 @@ void CStatView::OnDraw(CDC* pDC)
 	pDC->SetTextColor(RGB(0,0,0));
 
 	if (pDoc->raw_stalls==1)
-		sprintf(txt," 1 RAW Stall");
+		sprintf_s(txt,100," 1 RAW Stall");
 	else
-		sprintf(txt," %d RAW Stalls",pDoc->raw_stalls);
+		sprintf_s(txt,100," %d RAW Stalls",pDoc->raw_stalls);
 	pDC->TextOut(0,110,txt);
 
 	if(pDoc->waw_stalls==1)
-		sprintf(txt," 1 WAW Stall");
+		sprintf_s(txt,100," 1 WAW Stall");
 	else
-		sprintf(txt," %d WAW Stalls",pDoc->waw_stalls);
+		sprintf_s(txt,100," %d WAW Stalls",pDoc->waw_stalls);
 	pDC->TextOut(0,124,txt);
 
 	if (pDoc->war_stalls==1)
-		sprintf(txt," 1 WAR Stall");
+		sprintf_s(txt,100," 1 WAR Stall");
 	else
-		sprintf(txt," %d WAR Stalls",pDoc->war_stalls);
+		sprintf_s(txt,100," %d WAR Stalls",pDoc->war_stalls);
 	pDC->TextOut(0,138,txt);
 
 	if (pDoc->structural_stalls==1)
-		sprintf(txt," 1 Structural Stall");
+		sprintf_s(txt,100," 1 Structural Stall");
 	else
-		sprintf(txt," %d Structural Stalls",pDoc->structural_stalls);
+		sprintf_s(txt,100," %d Structural Stalls",pDoc->structural_stalls);
 	pDC->TextOut(0,152,txt);
 
 	if (pDoc->branch_taken_stalls==1)
-		sprintf(txt," 1 Branch Taken Stall");
+		sprintf_s(txt,100," 1 Branch Taken Stall");
 	else
-		sprintf(txt," %d Branch Taken Stalls",pDoc->branch_taken_stalls);
+		sprintf_s(txt,100," %d Branch Taken Stalls",pDoc->branch_taken_stalls);
 	pDC->TextOut(0,166,txt);
 
 	if (pDoc->branch_misprediction_stalls==1)
-		sprintf(txt," 1 Branch Misprediction Stall");
+		sprintf_s(txt,100," 1 Branch Misprediction Stall");
 	else 
-		sprintf(txt," %d Branch Misprediction Stalls",pDoc->branch_misprediction_stalls);
+		sprintf_s(txt,100," %d Branch Misprediction Stalls",pDoc->branch_misprediction_stalls);
 	pDC->TextOut(0,180,txt);
 
 
@@ -144,7 +144,7 @@ void CStatView::OnDraw(CDC* pDC)
 	pDC->TextOut(0,222," Code size");
 	pDC->SetTextColor(RGB(0,0,0));
 
-	sprintf(txt," %d Bytes",pDoc->codeptr);
+	sprintf_s(txt,100," %d Bytes",pDoc->codeptr);
 	pDC->TextOut(0,242,txt);
 
 }

@@ -75,13 +75,13 @@ protected:
 };
 
 /////////////////////////////////////////////////////////////////////////////
-
+/*
 BEGIN_TEMPLATE_MESSAGE_MAP(class BASE_TYPE, CFontCtrl<BASE_TYPE>, BASE_TYPE)
 	//{{AFX_MSG_MAP(CFontCtrl)
 	ON_WM_CREATE()
 	//}}AFX_MSG_MAP
 END_TEMPLATE_MESSAGE_MAP()
-
+*/
 template<class BASE_TYPE>
 void CFontCtrl<BASE_TYPE>::RecreateFont(BOOL fRedraw)
 {

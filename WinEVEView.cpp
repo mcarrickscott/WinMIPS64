@@ -104,15 +104,15 @@ void CWinEVEView::OnDraw(CDC* pDC)
 
 		if ((pDoc->cpu.cstat[i])==0) 
 		{
-			sprintf(&txt[pos]," %08x %s",fourbytes,linetext);
+			sprintf_s(&txt[pos],400-pos," %08x %s",fourbytes,linetext);
 			pDC->TextOut(0,14*i/4,txt);
 		}
 		else 
 		{
 			if ((pDoc->cpu.cstat[i]&2)!=0)
-				sprintf(&txt[pos],"%c%08x %s",171,fourbytes,linetext);
+				sprintf_s(&txt[pos],400-pos,"%c%08x %s",171,fourbytes,linetext);
 			else
-			     sprintf(&txt[pos]," %08x %s",fourbytes,linetext);                    
+			     sprintf_s(&txt[pos],400-pos," %08x %s",fourbytes,linetext);                    
 			if ((pDoc->cpu.cstat[i]&1)!=0)
 				pDC->SetTextColor(BLUE);
 			else

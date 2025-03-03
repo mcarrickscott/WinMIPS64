@@ -372,8 +372,8 @@ void CIOView::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags)
 			}
 			else
 			{
-				line+=nChar;
-				pDoc->cpu.Terminal+=nChar;
+				line+=(unsigned char)nChar;
+				pDoc->cpu.Terminal+=(unsigned char)nChar;
 				pDoc->cpu.ncols++;
 			}
 			if (caretcount==1)

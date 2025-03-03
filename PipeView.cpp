@@ -35,14 +35,14 @@ END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CPipeView drawing
-
+/*
 void get_mnemonic(CString s,char *txt)
 {
 	strcpy(txt,s);
 	
 
 }
-
+*/
 void CPipeView::OnDraw(CDC* pDC)
 {
 	unsigned int i,unit,shift;
@@ -156,7 +156,7 @@ void CPipeView::OnDraw(CDC* pDC)
 		pDC->SelectObject(brush);
 	}
 	pDC->Rectangle(CRect(-100,-400,100,-700));
-	sprintf(txt,"  DIV  %d",pDoc->pipe.div.cycles);
+	sprintf_s(txt,80,"  DIV  %d",pDoc->pipe.div.cycles);
 	pDC->TextOut(-60,-500,txt);
 	brush.DeleteObject();
 	brush.Detach();

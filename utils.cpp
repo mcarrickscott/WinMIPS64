@@ -21,7 +21,7 @@ int sprintnbits(char *txt,WORD32 addr,int n)
 	if (n%8!=0) nbytes++;
 	BYTE a[4];
 	unpack32(addr,a);
-	for (i=0;i<nbytes;i++) sprintf(&txt[2*i],"%02x",a[nbytes-i-1]);
+	for (i=0;i<nbytes;i++) sprintf_s(&txt[2*i],5,"%02x",a[nbytes-i-1]);
 	return nbytes;
 }
 
@@ -73,7 +73,7 @@ void unpack(WORD64 a,BYTE *b)
 
 void sprintword32(char *txt,WORD32 addr)
 {
-	sprintf(txt,"%08x",addr);
+	sprintf_s(txt,12,"%08x",addr);
 }
 
 void sprintword(char *txt,WORD64 val)
@@ -82,12 +82,12 @@ void sprintword(char *txt,WORD64 val)
 	BYTE a[8];
 	val&=MASK;
 	unpack(val,a);
-	for (i=0;i<STEP;i++) sprintf(&txt[2*i],"%02x",a[STEP-i-1]);
+	for (i=0;i<STEP;i++) sprintf_s(&txt[2*i],5,"%02x",a[STEP-i-1]);
 }
 
 void sprintdouble(char *txt,double db)
 {
-    sprintf(txt,"%016.8lf",db);
+    sprintf_s(txt,30,"%016.8lf",db);
 }
 
 BOOL in_range(WORD32 num,WORD32 mask)

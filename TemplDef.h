@@ -53,6 +53,7 @@
 		{ \
 
 #else
+/*
 #define BEGIN_TEMPLATE_MESSAGE_MAP(theTemplArgs, theClass, baseClass) \
 	template <theTemplArgs> \
 		const AFX_MSGMAP* theClass::GetMessageMap() const \
@@ -63,7 +64,7 @@
 	template <theTemplArgs> \
 		AFX_COMDAT const AFX_MSGMAP_ENTRY theClass::_messageEntries[] = \
 		{ \
-
+*/
 #endif
 
 #define END_TEMPLATE_MESSAGE_MAP() END_MESSAGE_MAP()

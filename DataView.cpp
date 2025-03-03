@@ -61,7 +61,7 @@ void CDataView::OnDraw(CDC* pDC)
 	
 		for (j=pos;j<pos+2;j++) txt[j]=' ';
 		sprintword(&txt[pos+2],bytes);
-		sprintf(&txt[pos+2+2*STEP]," %s",linetext);
+		sprintf_s(&txt[pos+2+2*STEP],400-pos-2-2*STEP," %s",linetext);
 
 		pos=(14*i)/STEP;
 
@@ -150,7 +150,7 @@ void CDataView::OnLButtonDblClk(UINT nFlags, CPoint point)
 	sprintnbits(txt,STEP*addr,bits(pDoc->DATASIZE));	
 	dlg.m_addr=txt;
 	if (dlg.DoModal()!=IDOK) return;
-	strcpy(txt,LPCTSTR(dlg.m_contents));
+	strcpy_s(txt,20,LPCTSTR(dlg.m_contents));
 
 	unpack(strtoint64(txt,NULL,16),&pDoc->cpu.data[addr*STEP]);
 
@@ -212,7 +212,7 @@ void CDataView::OnRButtonDblClk(UINT nFlags, CPoint point)
 	if (dlg.DoModal()!=IDOK) return;
 	if (strcmp(txt1,LPCTSTR(dlg.m_contents))!=0)
 	{
-		strcpy(txt,LPCTSTR(dlg.m_contents));
+		strcpy_s(txt,1000,LPCTSTR(dlg.m_contents));
 		db.d=atof(txt);
 		unpack(db.u,&pDoc->cpu.data[addr*STEP]);
 	}
