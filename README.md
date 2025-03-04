@@ -1,8 +1,8 @@
 # WinMIPS64
 
-WinMIPS64 is an instruction set simulator, and was designed as a replacement for the popular Microsoft Windows utility WinDLX. The classic text Computer Architecture - a Quantitative Approach, by 
-Hennessy & Patterson, 5th edition from its 3rd edition switched from the 32-bit DLX architecture, to the 64-bit MIPS architecture. Hence 
-the need for a new teaching tool. WinDLX had a very nice friendly user interface, including a full graphical simulation of the 5-stage pipeline. Therefore it was decided to create a similar 
+WinMIPS64 is an instruction set simulator, and was designed as a replacement for the popular Microsoft Windows utility WinDLX. 
+The classic text *Computer Architecture - a Quantitative Approach, by Hennessy & Patterson*, 5th edition from its 3rd edition switched from the 32-bit DLX architecture, to the 64-bit MIPS architecture. 
+Hence the need for a new teaching tool. WinDLX had a very nice friendly user interface, including a full graphical simulation of the 5-stage pipeline. Therefore it was decided to create a similar 
 tool for the MIPS64 with a very similar interface.
 
 If you know how to use WinDLX then the look-and-feel of WinMIPS64 will be very familiar. However there are a few changes.
@@ -23,7 +23,7 @@ PDF Documentation is available in the */doc* folder, along with a couple of lab 
 
 # Install
 
-Copy the repository contents to a working directory, and build the project *WinEsim.vcxproj* from source using Visual Studio C++. This will create the windows executable.
+Copy the repository contents to a working directory, and build the project *WinMIPS64.sln* from source using Visual Studio 2022 C++ for x64. This will create the windows executable.
 
 
 Mike Scott, March 2025
